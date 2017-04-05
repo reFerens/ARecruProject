@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
 
-@interface STConnectionManager : NSObject
+#define NILIFNULL(foo) ((foo == [NSNull null]) ? nil : foo)
+#define NULLIFNIL(foo) ((foo == nil) ? [NSNull null] : foo)
+#define EMPTYIFNIL(foo) ((foo == nil) ? @"" : foo)
+@class STStation, STCity;
 
+typedef void(^APISuccessHandler)(NSDictionary *response);
+typedef void(^APIFailureHandler)(NSInteger statusCode, NSError *error);
+typedef void(^StatisticsSuccessHandler)(NSArray <STStation *> *response);
+
+@interface STConnectionManager : AFHTTPSessionManager
++ (instancetype)sharedInstance;
+- (void)statisticsForCity:(STCity *)city completionHandler:(StatisticsSuccessHandler)completionHandler failure:(APIFailureHandler)failureHandler;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "STMainScreenController.h"
+#import "STConnectionManager.h"
 
 @interface STMainScreenController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[STConnectionManager sharedInstance] statisticsForCity:nil completionHandler:nil failure:nil];
 }
 
 @end

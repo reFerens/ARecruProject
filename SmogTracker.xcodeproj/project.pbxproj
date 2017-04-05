@@ -13,6 +13,11 @@
 		841EEDE31E9513A200F5B529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841EEDE11E9513A200F5B529 /* Main.storyboard */; };
 		841EEDE51E9513A200F5B529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841EEDE41E9513A200F5B529 /* Assets.xcassets */; };
 		841EEDE81E9513A200F5B529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841EEDE61E9513A200F5B529 /* LaunchScreen.storyboard */; };
+		844798381E9525F700600208 /* STStatistic.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798371E9525F700600208 /* STStatistic.m */; };
+		8447983B1E95280100600208 /* STStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447983A1E95280100600208 /* STStation.m */; };
+		8447983E1E952B4300600208 /* STCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447983D1E952B4300600208 /* STCity.m */; };
+		844798411E952BB700600208 /* STCityChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798401E952BB700600208 /* STCityChooserViewController.m */; };
+		844798451E952D6A00600208 /* STCityChooserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798441E952D6A00600208 /* STCityChooserDataSource.m */; };
 		848B65F41E9516FC0066904A /* STConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 848B65F31E9516FC0066904A /* STConnectionManager.m */; };
 		EB328CB79EBF18020204793E /* libPods-SmogTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235D945E1E84264A764429 /* libPods-SmogTracker.a */; };
 /* End PBXBuildFile section */
@@ -29,6 +34,16 @@
 		841EEDE41E9513A200F5B529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841EEDE71E9513A200F5B529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841EEDE91E9513A200F5B529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844798361E9525F700600208 /* STStatistic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStatistic.h; path = Model/STStatistic.h; sourceTree = "<group>"; };
+		844798371E9525F700600208 /* STStatistic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStatistic.m; path = Model/STStatistic.m; sourceTree = "<group>"; };
+		844798391E95280100600208 /* STStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStation.h; path = Model/STStation.h; sourceTree = "<group>"; };
+		8447983A1E95280100600208 /* STStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStation.m; path = Model/STStation.m; sourceTree = "<group>"; };
+		8447983C1E952B4300600208 /* STCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCity.h; path = Model/STCity.h; sourceTree = "<group>"; };
+		8447983D1E952B4300600208 /* STCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCity.m; path = Model/STCity.m; sourceTree = "<group>"; };
+		8447983F1E952BB700600208 /* STCityChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCityChooserViewController.h; path = ViewControllers/STCityChooserViewController.h; sourceTree = "<group>"; };
+		844798401E952BB700600208 /* STCityChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCityChooserViewController.m; path = ViewControllers/STCityChooserViewController.m; sourceTree = "<group>"; };
+		844798431E952D6A00600208 /* STCityChooserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCityChooserDataSource.h; path = "Data sources/STCityChooserDataSource.h"; sourceTree = "<group>"; };
+		844798441E952D6A00600208 /* STCityChooserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCityChooserDataSource.m; path = "Data sources/STCityChooserDataSource.m"; sourceTree = "<group>"; };
 		848B65F21E9516FC0066904A /* STConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STConnectionManager.h; path = Managers/STConnectionManager.h; sourceTree = "<group>"; };
 		848B65F31E9516FC0066904A /* STConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STConnectionManager.m; path = Managers/STConnectionManager.m; sourceTree = "<group>"; };
 		E1235D945E1E84264A764429 /* libPods-SmogTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmogTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +100,8 @@
 		841EEDD71E9513A200F5B529 /* SmogTracker */ = {
 			isa = PBXGroup;
 			children = (
+				844798421E952D3400600208 /* Data sources */,
+				844798351E95209D00600208 /* Model */,
 				848B65F51E95170D0066904A /* ViewControllers */,
 				848B65F11E9516D90066904A /* Managers */,
 				841EEDDB1E9513A200F5B529 /* AppDelegate.h */,
@@ -106,6 +123,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		844798351E95209D00600208 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				844798361E9525F700600208 /* STStatistic.h */,
+				844798371E9525F700600208 /* STStatistic.m */,
+				844798391E95280100600208 /* STStation.h */,
+				8447983A1E95280100600208 /* STStation.m */,
+				8447983C1E952B4300600208 /* STCity.h */,
+				8447983D1E952B4300600208 /* STCity.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		844798421E952D3400600208 /* Data sources */ = {
+			isa = PBXGroup;
+			children = (
+				844798431E952D6A00600208 /* STCityChooserDataSource.h */,
+				844798441E952D6A00600208 /* STCityChooserDataSource.m */,
+			);
+			name = "Data sources";
+			sourceTree = "<group>";
+		};
 		848B65F11E9516D90066904A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +159,8 @@
 			children = (
 				841EEDDE1E9513A200F5B529 /* STMainScreenController.h */,
 				841EEDDF1E9513A200F5B529 /* STMainScreenController.m */,
+				8447983F1E952BB700600208 /* STCityChooserViewController.h */,
+				844798401E952BB700600208 /* STCityChooserViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -248,8 +289,13 @@
 			files = (
 				841EEDE01E9513A200F5B529 /* STMainScreenController.m in Sources */,
 				841EEDDD1E9513A200F5B529 /* AppDelegate.m in Sources */,
+				844798411E952BB700600208 /* STCityChooserViewController.m in Sources */,
+				844798451E952D6A00600208 /* STCityChooserDataSource.m in Sources */,
 				848B65F41E9516FC0066904A /* STConnectionManager.m in Sources */,
+				844798381E9525F700600208 /* STStatistic.m in Sources */,
+				8447983E1E952B4300600208 /* STCity.m in Sources */,
 				841EEDDA1E9513A200F5B529 /* main.m in Sources */,
+				8447983B1E95280100600208 /* STStation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
