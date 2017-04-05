@@ -6,17 +6,16 @@
 //  Copyright © 2017 pawel.ferens. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "STMainScreenController.h"
 
-@interface ViewController ()
+@interface STMainScreenController ()
 
 @end
 
-@implementation ViewController
+@implementation STMainScreenController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 @end
