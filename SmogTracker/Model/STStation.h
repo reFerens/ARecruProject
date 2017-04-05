@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 @class STStatistic;
 
+extern NSString * _Nonnull kStationName;
+extern NSString * _Nonnull kStationStatistics;
+
 @interface STStation : NSObject
+@property (nullable, nonatomic, copy) NSString *name;
 @property (nonnull, nonatomic, copy) NSArray<STStatistic *> *statistics;
 @end

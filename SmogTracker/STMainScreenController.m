@@ -8,6 +8,7 @@
 
 #import "STMainScreenController.h"
 #import "STConnectionManager.h"
+#import "STCity.h"
 
 @interface STMainScreenController ()
 
@@ -17,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[STConnectionManager sharedInstance] statisticsForCity:nil completionHandler:nil failure:nil];
+    [[STConnectionManager sharedInstance] statisticsForCity:[STCity cityWithName:@"OLO" identifier:@"01"] completionHandler:^(NSArray<STStation *> *response) {
+        ;
+    } failure:^(NSInteger statusCode, NSError *error) {
+        ;
+    }];
 }
 
 @end

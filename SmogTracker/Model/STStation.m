@@ -9,5 +9,7 @@
 #import "STStation.h"
 
 @implementation STStation
+NSString const *kStationName = @"station_name";
+NSString const *kStationStatistics = @"details";
 
 @end

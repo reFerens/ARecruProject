@@ -7,7 +7,11 @@
 //
 
 #import "STStatistic.h"
-
+NSString const *kStatisticName = @"par_desc";
+NSString const *kStatisticType = @"par_html";
+NSString const *kStatisticValue = @"o_value";
+NSString const *kStatisticUnit = @"par_unit";
+NSString const *kStatisticState = @"g_nazwa";
 @implementation STStatistic
 
 @end

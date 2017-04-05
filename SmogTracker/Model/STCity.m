@@ -9,7 +9,7 @@
 #import "STCity.h"
 
 @implementation STCity
-+ (STCity *_Nonnull)cityWithName:(NSString *_Nullable)name identifier:(NSString *_Nullable)identifier
++ (STCity *_Nonnull)cityWithName:(NSString *_Nonnull)name identifier:(NSString *_Nonnull)identifier
 {
     STCity *city = [[STCity alloc] init];
     city.name = name;
