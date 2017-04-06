@@ -241,6 +241,38 @@
             endingLineNumber = "103"
             landmarkName = "-__configureViewForStatistic:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[STMainScreenController __configureViewForStatistic:]"
+                  moduleName = "SmogTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Projekty%20iOS/SmogTracker/SmogTracker/STMainScreenController.m"
+                  timestampString = "513194329.49006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "1557">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[STMainScreenController __configureViewForStatistic:]"
+                  moduleName = "SmogTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Projekty%20iOS/SmogTracker/SmogTracker/STMainScreenController.m"
+                  timestampString = "513194329.493769"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "1602">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

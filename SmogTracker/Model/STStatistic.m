@@ -26,10 +26,14 @@ NSString const *kStatisticState = @"g_nazwa";
 - (NSDictionary *)mappingDict
 {
     if (!_mappingDict) {
+        //
+        // Some hardcoded values found in google. Just for the sake of circular view
+        //
         _mappingDict = @{@"pm10" : @(50),
                          @"pm2.5" :@(27),
                          @"no2" : @(200),
-                         @"co" : @(5000)};
+                         @"co" : @(5000),
+                         @"so2" : @(350)};
     }
     return _mappingDict;
 }
