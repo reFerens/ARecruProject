@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KDCircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SmogTracker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>962BA7B9C35D5C552C37FBDE715D2324</key>
+		<key>322428ECC8C5EC71F14C92233787C7AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<key>9ADA99DB3D7F7F7984396052284DD3B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
