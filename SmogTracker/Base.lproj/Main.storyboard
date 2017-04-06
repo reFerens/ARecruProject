@@ -67,7 +67,23 @@
                                     </label>
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5Gt-so-0i2" customClass="KDCircularProgress" customModule="KDCircularProgress">
                                         <rect key="frame" x="8" y="131" width="327" height="343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUJ-hE-YE0">
+                                                <rect key="frame" x="123" y="131.5" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Bpb-eV-9pQ"/>
+                                                    <constraint firstAttribute="height" constant="80" id="yyB-cP-nFb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="KUJ-hE-YE0" firstAttribute="centerY" secondItem="5Gt-so-0i2" secondAttribute="centerY" id="0JF-HH-TrB"/>
+                                            <constraint firstItem="KUJ-hE-YE0" firstAttribute="centerX" secondItem="5Gt-so-0i2" secondAttribute="centerX" id="O0m-fh-jgR"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="angle">
                                                 <integer key="value" value="300"/>
@@ -153,7 +169,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.96259715025906734" green="0.96259715025906734" blue="0.96259715025906734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.90127104922279788" green="0.90127104922279788" blue="0.90127104922279788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="1ln-uz-DtS" secondAttribute="bottom" id="Joy-ni-j7A"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="1ln-uz-DtS" secondAttribute="trailing" id="OBP-qH-owr"/>
@@ -188,6 +204,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="circularProgressView" destination="5Gt-so-0i2" id="fml-sM-idt"/>
+                        <outlet property="percentageLabel" destination="KUJ-hE-YE0" id="csG-kl-Ekr"/>
                         <outlet property="statisticNameLabel" destination="8PU-lk-9Bv" id="3wH-NZ-H9s"/>
                         <outlet property="statisticStateLabel" destination="n4g-Kw-ESQ" id="xUh-Ie-Unt"/>
                         <outlet property="statisticTypeLabel" destination="5M0-Qp-DSq" id="Uz0-Ex-FAN"/>

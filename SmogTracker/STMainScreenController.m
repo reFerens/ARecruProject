@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *statisticTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statisticValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statisticStateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *percentageLabel;
 @property (weak, nonatomic) IBOutlet KDCircularProgress *circularProgressView;
 @property (weak, nonatomic) IBOutlet UICollectionView *statisticsCollectionView;
 @property (nullable, nonatomic, strong) STMainScreenControllerDataSource *dataSource;
@@ -78,7 +79,11 @@
     self.statisticTypeLabel.text = statistic.type;
     self.statisticValueLabel.text = [NSString stringWithFormat:@"%@ %@", statistic.value, statistic.unit];
     self.statisticStateLabel.text = [NSString stringWithFormat:@"%@ : %@", NSLocalizedString(@"Air condition:", nil), statistic.state];
-    CGFloat angle = ([statistic.value doubleValue]/100.0) * 360.0;
+    
+    CGFloat percentage = ([statistic.value doubleValue]/[statistic.maximumAllowedValue floatValue]) * 100.0;
+    self.percentageLabel.text = [NSString stringWithFormat:@"%.2f %%", percentage];
+    
+    CGFloat angle = ([statistic.value doubleValue]/[statistic.maximumAllowedValue floatValue]) * 360.0;
     [self.circularProgressView animateToAngle:angle duration:1.0 relativeDuration:NO completion:nil];
 }
 

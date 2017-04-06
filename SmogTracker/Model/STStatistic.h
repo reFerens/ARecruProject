@@ -20,4 +20,7 @@ extern NSString * _Nonnull kStatisticState;
 @property (nullable, nonatomic, copy) NSString *value;
 @property (nullable, nonatomic, copy) NSString *state;
 @property (nullable, nonatomic, copy) NSString *unit;
+
+- (NSNumber *_Nullable)maximumAllowedValue;
+
 @end
