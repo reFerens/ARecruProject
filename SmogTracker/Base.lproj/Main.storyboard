@@ -98,7 +98,7 @@
                                                 <color key="value" red="0.63314882183322019" green="0.63314882183322019" blue="0.63314882183322019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                                <color key="value" red="0.44622880979421981" green="0.47743818750804112" blue="0.94458555588450455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.30517064655652332" green="0.46639988062938198" blue="0.94458555588450455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gradientRotateSpeed">
                                                 <integer key="value" value="10"/>
@@ -116,7 +116,7 @@
                                                 <color key="value" red="0.54624166529409035" green="0.70950912661968912" blue="0.84103957142854602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="IBColor3">
-                                                <color key="value" red="0.29664862842439621" green="0.3202693695963007" blue="0.94458555588450455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.15499644473751428" green="0.20455466271434661" blue="0.94458555588450455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>

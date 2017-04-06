@@ -18,6 +18,7 @@
 {
     STMainScreenCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"statisticCell" forIndexPath:indexPath];
     cell.nameLabel.text = self.statistics[indexPath.row].type;
+    cell.selected = self.selectedIndexPath.row == indexPath.row;
     return cell;
 }
 

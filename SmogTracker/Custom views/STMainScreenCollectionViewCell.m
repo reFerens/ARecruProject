@@ -15,4 +15,18 @@
     self.layer.cornerRadius = 10.0;
     return self;
 }
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    
+    if (selected) {
+        self.layer.borderWidth = 4.0;
+        self.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    } else {
+        self.layer.borderWidth = 0.0;
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+    }
+}
+
 @end

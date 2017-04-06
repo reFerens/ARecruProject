@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.statisticsCollectionView.allowsMultipleSelection = NO;
     self.statisticsCollectionView.dataSource = self.dataSource;
     self.statisticsCollectionView.delegate = self;
     [self __prepareProgressView];
@@ -46,8 +47,10 @@
 - (void)cityChooser:(STCityChooserViewController *)controller didSelectStation:(STStation *)station
 {
     self.title = station.name;
+    self.dataSource.selectedIndexPath = nil;
     self.dataSource.statistics = station.statistics;
     [self.statisticsCollectionView reloadData];
+    
     [self __configureViewForStatistic:station.statistics[0]];
 }
 
@@ -61,6 +64,15 @@
 }
 
 #pragma mark - Private methods
+
+- (void)__clearCollectionViewSelection
+{
+    for (int i = 0; i < self.dataSource.statistics.count; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+        [[self.statisticsCollectionView cellForItemAtIndexPath:indexPath] setSelected:NO];
+    }
+}
+
 - (void)__prepareProgressView
 {
     self.circularProgressView.startAngle = -90;
@@ -80,16 +92,18 @@
     self.statisticValueLabel.text = [NSString stringWithFormat:@"%@ %@", statistic.value, statistic.unit];
     self.statisticStateLabel.text = [NSString stringWithFormat:@"%@ : %@", NSLocalizedString(@"Air condition:", nil), statistic.state];
     
-    CGFloat percentage = ([statistic.value doubleValue]/[statistic.maximumAllowedValue floatValue]) * 100.0;
+    CGFloat percentage = ([statistic.value doubleValue]/[statistic.maximumAllowedValue doubleValue]) * 100.0;
     self.percentageLabel.text = [NSString stringWithFormat:@"%.2f %%", percentage];
     
-    CGFloat angle = ([statistic.value doubleValue]/[statistic.maximumAllowedValue floatValue]) * 360.0;
-    [self.circularProgressView animateToAngle:angle duration:1.0 relativeDuration:NO completion:nil];
+    CGFloat angle = ([statistic.value doubleValue]/[statistic.maximumAllowedValue doubleValue]) * 360.0;
+    [self.circularProgressView animateToAngle:MIN(angle, 360.0) duration:1.0 relativeDuration:NO completion:nil];
 }
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self __clearCollectionViewSelection];
+    self.dataSource.selectedIndexPath = indexPath;
     [self __configureViewForStatistic:self.dataSource.statistics[indexPath.row]];
 }
 @end

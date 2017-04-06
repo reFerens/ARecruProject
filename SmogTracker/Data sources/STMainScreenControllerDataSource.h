@@ -13,4 +13,5 @@
 
 @interface STMainScreenControllerDataSource : NSObject <UICollectionViewDataSource>
 @property (nullable, nonatomic, copy) NSArray <STStatistic *> *statistics;
+@property (nullable, nonatomic, strong) NSIndexPath* selectedIndexPath;
 @end
