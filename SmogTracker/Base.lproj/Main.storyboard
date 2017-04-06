@@ -206,7 +206,7 @@
                                     <constraint firstItem="tDm-lM-kHY" firstAttribute="leading" secondItem="3gP-CL-znL" secondAttribute="leading" id="zrd-Rr-2ms"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-n8-5yw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-n8-5yw">
                                 <rect key="frame" x="20" y="658" width="374" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>

@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmogTracker/Model/STStatistic.m"
-            timestampString = "513187936.278308"
+            timestampString = "513195439.90452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "-mappingDict"
             landmarkType = "7">
          </BreakpointContent>

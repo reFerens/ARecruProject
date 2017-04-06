@@ -37,27 +37,27 @@ static NSString * const kApiActualDataKey = @"actual";
                                  kAPICityIDKey : NULLIFNIL(city.cityIdentifier)};
     
     [self __performGETWithMethod:kAPIDataKey parameters:parameters success:^(NSDictionary *response) {
-        NSDictionary *data = response[kAPIDataKey];
+        NSDictionary *data = NILIFNULL(response[kAPIDataKey]);
         
         if (data) {
             NSMutableArray *mutableStations = [[NSMutableArray alloc] init];
             
-            NSArray *stations = data[kApiActualDataKey];
+            NSArray *stations = NILIFNULL(data[kApiActualDataKey]);
             for (NSDictionary *stationDict in stations) {
                 STStation *station = [[STStation alloc] init];
                 station.name = NILIFNULL(stationDict[kStationName]);
                 [mutableStations addObject:station];
-                NSArray *statistics = stationDict[kStationStatistics];
+                NSArray *statistics = NILIFNULL(stationDict[kStationStatistics]);
                 
                 if (statistics) {
                     NSMutableArray <STStatistic *> *statisticsMutableArray = [[NSMutableArray alloc] init];
                     for (NSDictionary *statisticDict in statistics) {
                         STStatistic *statistic = [[STStatistic alloc] init];
-                        statistic.name = statisticDict[kStatisticName];
-                        statistic.type = statisticDict[kStatisticType];
-                        statistic.unit = statisticDict[kStatisticUnit];
-                        statistic.state = statisticDict[kStatisticState];
-                        statistic.value = statisticDict[kStatisticValue];
+                        statistic.name = NILIFNULL(statisticDict[kStatisticName]);
+                        statistic.type = NILIFNULL(statisticDict[kStatisticType]);
+                        statistic.unit = NILIFNULL(statisticDict[kStatisticUnit]);
+                        statistic.state = NILIFNULL(statisticDict[kStatisticState]);
+                        statistic.value = NILIFNULL(statisticDict[kStatisticValue]);
                         [statisticsMutableArray addObject:statistic];
                     }
                     station.statistics = [statisticsMutableArray copy];
