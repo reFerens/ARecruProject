@@ -11,20 +11,7 @@
 #import "STStatistic.h"
 #import "STMainScreenCollectionViewCell.h"
 
-@interface STMainScreenControllerDataSource () <UICollectionViewDataSource>
-@property (nullable, nonatomic, copy) NSArray <STStatistic *> *statistics;
-@end
-
 @implementation STMainScreenControllerDataSource
-
-#pragma mark - Public methods
-- (instancetype)initWithStation:(STStation *)station
-{
-    if (self = [super init]) {
-        self.statistics = station.statistics;
-    }
-    return self;
-}
 
 #pragma mark - UICollectionView data source
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

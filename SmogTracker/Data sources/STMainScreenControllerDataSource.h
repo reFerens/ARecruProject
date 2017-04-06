@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class STStation;
+#import <UIKit/UIKit.h>
 
-@interface STMainScreenControllerDataSource : NSObject
-- (instancetype) __unavailable init;
-- (instancetype)initWithStation:(STStation *)station;
+@class STStation, STStatistic;
+
+@interface STMainScreenControllerDataSource : NSObject <UICollectionViewDataSource>
+@property (nullable, nonatomic, copy) NSArray <STStatistic *> *statistics;
 @end

@@ -8,26 +8,58 @@
 
 #import "STMainScreenController.h"
 #import "STCity.h"
+#import "STCityChooserViewController.h"
+#import "STStation.h"
+#import "STMainScreenControllerDataSource.h"
+#import "STStatistic.h"
 
 @import KDCircularProgress;
 
-@interface STMainScreenController ()
+@interface STMainScreenController () <STCityChooserViewControllerDelegate, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *statisticNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statisticTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statisticValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statisticStateLabel;
 @property (weak, nonatomic) IBOutlet KDCircularProgress *circularProgressView;
 @property (weak, nonatomic) IBOutlet UICollectionView *statisticsCollectionView;
-- (IBAction)selectCityButtonTapped:(id)sender;
+@property (nullable, nonatomic, strong) STMainScreenControllerDataSource *dataSource;
 @end
 
 @implementation STMainScreenController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.statisticsCollectionView.dataSource = self.dataSource;
+    self.statisticsCollectionView.delegate = self;
     [self __prepareProgressView];
 }
 
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    STCityChooserViewController *destinationController = [(UINavigationController *)segue.destinationViewController viewControllers][0];
+    destinationController.delegate = self;
+}
+
+#pragma mark - STCityChooserViewControllerDelegate
+- (void)cityChooser:(STCityChooserViewController *)controller didSelectStation:(STStation *)station
+{
+    self.title = station.name;
+    self.dataSource.statistics = station.statistics;
+    [self.statisticsCollectionView reloadData];
+    [self __configureViewForStatistic:station.statistics[0]];
+}
+
+#pragma mark - Lazy load properties
+- (STMainScreenControllerDataSource *)dataSource
+{
+    if (!_dataSource) {
+        _dataSource = [[STMainScreenControllerDataSource alloc] init];
+    }
+    return _dataSource;
+}
+
+#pragma mark - Private methods
 - (void)__prepareProgressView
 {
     self.circularProgressView.startAngle = -90;
@@ -40,6 +72,19 @@
     self.circularProgressView.glowAmount = 0.9;
 }
 
-- (IBAction)selectCityButtonTapped:(id)sender {
+- (void)__configureViewForStatistic:(STStatistic *)statistic
+{
+    self.statisticNameLabel.text = statistic.name;
+    self.statisticTypeLabel.text = statistic.type;
+    self.statisticValueLabel.text = [NSString stringWithFormat:@"%@ %@", statistic.value, statistic.unit];
+    self.statisticStateLabel.text = statistic.state;
+    CGFloat angle = ([statistic.value doubleValue]/100.0) * 360.0;
+    [self.circularProgressView animateToAngle:angle duration:1.0 relativeDuration:NO completion:nil];
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self __configureViewForStatistic:self.dataSource.statistics[indexPath.row]];
 }
 @end

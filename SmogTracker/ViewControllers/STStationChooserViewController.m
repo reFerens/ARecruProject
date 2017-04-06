@@ -45,4 +45,12 @@
 {
     return self.stations.count;
 }
+
+#pragma mark - UITableView delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegate stationChooser:self didSelectStation:self.stations[indexPath.row]];
+}
+
 @end

@@ -13,7 +13,7 @@
 #import "STStationChooserViewController.h"
 #import "STCity.h"
 
-@interface STCityChooserViewController () <UITableViewDelegate>
+@interface STCityChooserViewController () <UITableViewDelegate, STStationChooserViewControllerDelegate>
 @property (nullable, nonatomic, strong) STCityChooserDataSource *dataSource;
 @property (nullable, nonatomic, copy) NSArray <STStation *> *stations;
 - (IBAction)cancelButtonAction:(id)sender;
@@ -47,9 +47,20 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     STStationChooserViewController *destinationController = segue.destinationViewController;
+    destinationController.delegate = self;
     destinationController.stations = self.stations;
 }
-- (IBAction)cancelButtonAction:(id)sender {
+
+- (IBAction)cancelButtonAction:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - STStationChooserViewControllerDelegate
+
+- (void)stationChooser:(STStationChooserViewController *)controller didSelectStation:(STStation *)station
+{
+    [self.delegate cityChooser:self didSelectStation:station];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

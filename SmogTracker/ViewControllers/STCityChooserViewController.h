@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class STCityChooserViewController, STStation;
+@protocol STCityChooserViewControllerDelegate <NSObject>
+- (void)cityChooser:(STCityChooserViewController *_Nonnull)controller didSelectStation:(STStation *_Nonnull)station;
+@end
 
 @interface STCityChooserViewController : UITableViewController
-
+@property (nullable, weak, nonatomic) id <STCityChooserViewControllerDelegate> delegate;
 @end
