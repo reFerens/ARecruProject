@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Choose city", nil);
     self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     self.dataSource = [[STCityChooserDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;

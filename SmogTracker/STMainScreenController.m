@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *percentageLabel;
 @property (weak, nonatomic) IBOutlet KDCircularProgress *circularProgressView;
 @property (weak, nonatomic) IBOutlet UICollectionView *statisticsCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *overlayView;
 @property (nullable, nonatomic, strong) STMainScreenControllerDataSource *dataSource;
 @end
 
@@ -30,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.overlayView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.98];
     self.statisticsCollectionView.allowsMultipleSelection = NO;
     self.statisticsCollectionView.dataSource = self.dataSource;
     self.statisticsCollectionView.delegate = self;
@@ -46,6 +48,8 @@
 #pragma mark - STCityChooserViewControllerDelegate
 - (void)cityChooser:(STCityChooserViewController *)controller didSelectStation:(STStation *)station
 {
+    self.overlayView.alpha = 0.0f;
+
     self.title = station.name;
     self.dataSource.selectedIndexPath = nil;
     self.dataSource.statistics = station.statistics;

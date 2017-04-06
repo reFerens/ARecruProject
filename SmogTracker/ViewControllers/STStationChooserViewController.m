@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Choose station", nil);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 }
