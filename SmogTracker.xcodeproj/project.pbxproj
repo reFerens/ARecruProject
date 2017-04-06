@@ -18,6 +18,9 @@
 		8447983E1E952B4300600208 /* STCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447983D1E952B4300600208 /* STCity.m */; };
 		844798411E952BB700600208 /* STCityChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798401E952BB700600208 /* STCityChooserViewController.m */; };
 		844798451E952D6A00600208 /* STCityChooserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798441E952D6A00600208 /* STCityChooserDataSource.m */; };
+		8447984B1E96677700600208 /* STMainScreenControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447984A1E96677700600208 /* STMainScreenControllerDataSource.m */; };
+		8447984F1E966C3100600208 /* STMainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447984E1E966C3100600208 /* STMainScreenCollectionViewCell.m */; };
+		844798521E967A5A00600208 /* STStationChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844798511E967A5A00600208 /* STStationChooserViewController.m */; };
 		848B65F41E9516FC0066904A /* STConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 848B65F31E9516FC0066904A /* STConnectionManager.m */; };
 		E401C6957E20F5E6E19CF7E2 /* Pods_SmogTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6466BA75E230E4B0CBF90D /* Pods_SmogTracker.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,12 @@
 		844798431E952D6A00600208 /* STCityChooserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STCityChooserDataSource.h; path = "Data sources/STCityChooserDataSource.h"; sourceTree = "<group>"; };
 		844798441E952D6A00600208 /* STCityChooserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STCityChooserDataSource.m; path = "Data sources/STCityChooserDataSource.m"; sourceTree = "<group>"; };
 		844798461E965EE900600208 /* SmogTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmogTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		844798491E96677700600208 /* STMainScreenControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMainScreenControllerDataSource.h; path = "Data sources/STMainScreenControllerDataSource.h"; sourceTree = "<group>"; };
+		8447984A1E96677700600208 /* STMainScreenControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STMainScreenControllerDataSource.m; path = "Data sources/STMainScreenControllerDataSource.m"; sourceTree = "<group>"; };
+		8447984D1E966C3100600208 /* STMainScreenCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMainScreenCollectionViewCell.h; path = "Custom views/STMainScreenCollectionViewCell.h"; sourceTree = "<group>"; };
+		8447984E1E966C3100600208 /* STMainScreenCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STMainScreenCollectionViewCell.m; path = "Custom views/STMainScreenCollectionViewCell.m"; sourceTree = "<group>"; };
+		844798501E967A5A00600208 /* STStationChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STStationChooserViewController.h; path = ViewControllers/STStationChooserViewController.h; sourceTree = "<group>"; };
+		844798511E967A5A00600208 /* STStationChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STStationChooserViewController.m; path = ViewControllers/STStationChooserViewController.m; sourceTree = "<group>"; };
 		848B65F21E9516FC0066904A /* STConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STConnectionManager.h; path = Managers/STConnectionManager.h; sourceTree = "<group>"; };
 		848B65F31E9516FC0066904A /* STConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STConnectionManager.m; path = Managers/STConnectionManager.m; sourceTree = "<group>"; };
 		E231FAB3AC26FE11E26128DE /* Pods-SmogTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmogTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmogTracker/Pods-SmogTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +110,7 @@
 		841EEDD71E9513A200F5B529 /* SmogTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8447984C1E966BFB00600208 /* Custom views */,
 				844798421E952D3400600208 /* Data sources */,
 				844798351E95209D00600208 /* Model */,
 				848B65F51E95170D0066904A /* ViewControllers */,
@@ -143,8 +153,19 @@
 			children = (
 				844798431E952D6A00600208 /* STCityChooserDataSource.h */,
 				844798441E952D6A00600208 /* STCityChooserDataSource.m */,
+				844798491E96677700600208 /* STMainScreenControllerDataSource.h */,
+				8447984A1E96677700600208 /* STMainScreenControllerDataSource.m */,
 			);
 			name = "Data sources";
+			sourceTree = "<group>";
+		};
+		8447984C1E966BFB00600208 /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				8447984D1E966C3100600208 /* STMainScreenCollectionViewCell.h */,
+				8447984E1E966C3100600208 /* STMainScreenCollectionViewCell.m */,
+			);
+			name = "Custom views";
 			sourceTree = "<group>";
 		};
 		848B65F11E9516D90066904A /* Managers */ = {
@@ -163,6 +184,8 @@
 				841EEDDF1E9513A200F5B529 /* STMainScreenController.m */,
 				8447983F1E952BB700600208 /* STCityChooserViewController.h */,
 				844798401E952BB700600208 /* STCityChooserViewController.m */,
+				844798501E967A5A00600208 /* STStationChooserViewController.h */,
+				844798511E967A5A00600208 /* STStationChooserViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -292,9 +315,12 @@
 			files = (
 				841EEDE01E9513A200F5B529 /* STMainScreenController.m in Sources */,
 				841EEDDD1E9513A200F5B529 /* AppDelegate.m in Sources */,
+				8447984B1E96677700600208 /* STMainScreenControllerDataSource.m in Sources */,
 				844798411E952BB700600208 /* STCityChooserViewController.m in Sources */,
 				844798451E952D6A00600208 /* STCityChooserDataSource.m in Sources */,
+				844798521E967A5A00600208 /* STStationChooserViewController.m in Sources */,
 				848B65F41E9516FC0066904A /* STConnectionManager.m in Sources */,
+				8447984F1E966C3100600208 /* STMainScreenCollectionViewCell.m in Sources */,
 				844798381E9525F700600208 /* STStatistic.m in Sources */,
 				8447983E1E952B4300600208 /* STCity.m in Sources */,
 				841EEDDA1E9513A200F5B529 /* main.m in Sources */,

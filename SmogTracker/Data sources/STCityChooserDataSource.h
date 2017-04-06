@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @class STCity;
-@interface STCityChooserDataSource : NSObject
-- (NSArray <STCity *> *)cityList;
+@interface STCityChooserDataSource : NSObject <UITableViewDataSource>
+@property (nonnull, nonatomic, strong, readonly) NSArray <STCity *> *cities;
 @end

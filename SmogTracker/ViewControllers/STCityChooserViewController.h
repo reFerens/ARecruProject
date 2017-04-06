@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STCityChooserViewController : UIViewController
+@interface STCityChooserViewController : UITableViewController
 
 @end

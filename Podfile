@@ -5,4 +5,5 @@ target 'SmogTracker' do
 use_frameworks!
 pod 'AFNetworking', '~> 3.0'
 pod 'KDCircularProgress'
+pod 'SVProgressHUD’
 end
