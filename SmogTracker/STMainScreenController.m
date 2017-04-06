@@ -77,7 +77,7 @@
     self.statisticNameLabel.text = statistic.name;
     self.statisticTypeLabel.text = statistic.type;
     self.statisticValueLabel.text = [NSString stringWithFormat:@"%@ %@", statistic.value, statistic.unit];
-    self.statisticStateLabel.text = statistic.state;
+    self.statisticStateLabel.text = [NSString stringWithFormat:@"%@ : %@", NSLocalizedString(@"Air condition:", nil), statistic.state];
     CGFloat angle = ([statistic.value doubleValue]/100.0) * 360.0;
     [self.circularProgressView animateToAngle:angle duration:1.0 relativeDuration:NO completion:nil];
 }

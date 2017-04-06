@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmogTracker/ViewControllers/STCityChooserViewController.m"
-            timestampString = "513182805.880395"
+            timestampString = "513186891.417887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
             <Locations>

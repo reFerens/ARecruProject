@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     self.dataSource = [[STCityChooserDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self;

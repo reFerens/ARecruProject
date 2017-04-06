@@ -9,5 +9,10 @@
 #import "STMainScreenCollectionViewCell.h"
 
 @implementation STMainScreenCollectionViewCell
-
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    self.layer.cornerRadius = 10.0;
+    return self;
+}
 @end
