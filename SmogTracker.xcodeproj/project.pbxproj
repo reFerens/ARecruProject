@@ -224,6 +224,7 @@
 				TargetAttributes = {
 					841EEDD41E9513A200F5B529 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = CMAH3J6A6N;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -448,7 +449,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CMAH3J6A6N;
 				INFOPLIST_FILE = SmogTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pawel.ferens.SmogTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +468,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CMAH3J6A6N;
 				INFOPLIST_FILE = SmogTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pawel.ferens.SmogTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
